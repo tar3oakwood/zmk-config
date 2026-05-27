@@ -1,0 +1,5 @@
+#include "gravity36_xiao.dtsi"
+
+&kscan0 {
+    // 右手側でピンが変わる場合は、ここに右手のrow-gpiosやcol-gpiosを上書きします
+};
