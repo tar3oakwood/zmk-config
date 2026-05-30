@@ -1,9 +1,9 @@
 #include "gravity36_xiao.dtsi"
 
-&default_transform {
+/* &default_transform {
     col-offset = <5>;
 };
-
+*/
 &kscan0{
     col-gpios
         = <&xiao_d 1 GPIO_ACTIVE_HIGH>
