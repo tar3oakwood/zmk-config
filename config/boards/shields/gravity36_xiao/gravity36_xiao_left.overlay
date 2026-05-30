@@ -1,12 +1,1 @@
 #include "gravity36_xiao.dtsi"
-
-&kscan0 {
-    compatible = "zmk,kscan-gpio-matrix";
-    // 左手はそのままの設定でOK
-};
-
-/ {
-    chosen {
-        zmk,kscan = &kscan0;
-    };
-};
