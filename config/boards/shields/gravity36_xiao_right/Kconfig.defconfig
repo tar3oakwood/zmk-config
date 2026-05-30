@@ -1,6 +1,3 @@
 if SHIELD_GRAVITY36_XIAO_RIGHT
 config ZMK_SPLIT
     default y
-config ZMK_SPLIT_ROLE_CENTRAL
-    default y
-endif
