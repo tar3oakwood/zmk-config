@@ -1,4 +1,4 @@
-#include <dt-bindings/zmk/rgbled_widget.h>
+#include "../../../../../zmk-rgbled-widget/include/dt-bindings/zmk/rgbled_widget.h"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
