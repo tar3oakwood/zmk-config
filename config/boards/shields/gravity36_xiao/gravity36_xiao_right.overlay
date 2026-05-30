@@ -1,9 +1,12 @@
 #include "gravity36_xiao.dtsi"
 
-&default_transform {
-    /* * 右側は物理的に左と同じ配線なので、
-     * 「読み取った列番号(col)に5を足せ」という命令で
-     * 自動的に右側のキー(RC(0,5)〜)として認識させます
-     */
-    col-offset = <5>;
+/* col-offset は削除し、代わりに右側の列番号を上書きする */
+&kscan0 {
+    col-gpios
+        = <&xiao_d 1 GPIO_ACTIVE_HIGH>
+        , <&xiao_d 2 GPIO_ACTIVE_HIGH>
+        , <&xiao_d 3 GPIO_ACTIVE_HIGH>
+        , <&xiao_d 4 GPIO_ACTIVE_HIGH>
+        , <&xiao_d 5 GPIO_ACTIVE_HIGH>
+        ;
 };
