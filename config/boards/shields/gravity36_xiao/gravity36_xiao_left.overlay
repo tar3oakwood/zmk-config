@@ -1,1 +1,5 @@
 #include "gravity36_xiao.dtsi"
+
+&kscan0 {
+    // 左手のキーボードとして定義
+};
