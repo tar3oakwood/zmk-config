@@ -1,0 +1,17 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+        default_layer {
+            bindings = <
+                /* 左手側担当分 (18キー) */
+                &kp Q &kp W &kp E &kp R &kp T
+                &kp A &kp S &kp D &kp F &kp G
+                &kp Z &kp X &kp C &kp V &kp B
+                &kp ESC &kp SPACE &kp APOS
+            >;
+        };
+    };
+};
