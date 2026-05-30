@@ -6,8 +6,17 @@
 #define RGBLED_WIDGET_COLOR_MAGENTA 5
 #define RGBLED_WIDGET_COLOR_CYAN    6
 #define RGBLED_WIDGET_COLOR_WHITE   7
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+
+/ {
+    aliases {
+        led-red = &led0;
+        led-green = &led1;
+        led-blue = &led2;
+    };
+};
 
 / {
     keymap {
