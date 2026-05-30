@@ -2,10 +2,12 @@
 ---
 include:
   - board: xiao_ble//zmk
+    board_id: xiao_ble
     shield: gravity36_xiao_left
     snippets:
       - zmk-rgbled-widget
   - board: xiao_ble//zmk
+    board_id: xiao_ble
     shield: gravity36_xiao_right
     snippets:
       - zmk-rgbled-widget
