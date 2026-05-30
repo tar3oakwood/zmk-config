@@ -1,0 +1,8 @@
+# 左右分割通信を有効化
+CONFIG_ZMK_SPLIT=y
+
+# BLE接続（無線）を有効化
+CONFIG_ZMK_SPLIT_BLE=y
+
+# 左右の役割を自動化するための設定（これを入れないと通信が始まらないことが多いです）
+CONFIG_ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_FETCHING=y
