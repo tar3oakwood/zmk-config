@@ -1,10 +1,7 @@
+# config/build.yaml
 ---
 include:
   - board: seeeduino_xiao_ble
     shield: gravity36_xiao_left
-    remotes:
-      - url: https://github.com/caksoylar/zmk-rgbled-widget
   - board: seeeduino_xiao_ble
     shield: gravity36_xiao_right
-  - board: seeeduino_xiao_ble
-    shield: settings_reset
