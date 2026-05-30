@@ -1,11 +1,9 @@
 manifest:
-  defaults:
-    revision: main
   remotes:
     - name: zmkfirmware
-      url-base: https://github.com
+      url-base: https://github.com/zmkfirmware
     - name: caksoylar
-      url-base: https://github.com
+      url-base: https://github.com/caksoylar
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -14,6 +12,6 @@ manifest:
     - name: zmk-rgbled-widget
       remote: caksoylar
       revision: main
-      import: fstab  # ←これを追加することでシステムが自動でヘッダーのパスを認識します
+      import: fstab
   self:
     path: config
