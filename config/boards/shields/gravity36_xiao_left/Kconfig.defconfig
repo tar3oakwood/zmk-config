@@ -1,4 +1,0 @@
-if SHIELD_GRAVITY36_XIAO_LEFT
-config ZMK_SPLIT
-    default y
-endif
