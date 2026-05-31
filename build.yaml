@@ -9,3 +9,4 @@ include:
     shield: gravity36_xiao_right
     snippets:
       - zmk-rgbled-widget
+settings_reset: true
