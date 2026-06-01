@@ -2,7 +2,7 @@
 
 / {
     chosen {
-        zmk,kscan = &kscan_right; /* dtsi内に kscan_right を追加定義する */
+        zmk,kscan = &kscan0;
         zmk,matrix_transform = &default_transform;
     };
 };
