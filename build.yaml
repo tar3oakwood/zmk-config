@@ -1,13 +1,13 @@
 # config/build.yaml
 ---
 include:
-  - board: xiao_ble//zmk
+  - board: xiao_ble
     shield: gravity36_xiao_left
     snippets:
       - zmk-rgbled-widget
-  - board: xiao_ble//zmk
+  - board: xiao_ble
     shield: gravity36_xiao_right
     snippets:
       - zmk-rgbled-widget
-  - board: xiao_ble/nrf52840/zmk
+  - board: xiao_ble/
     shield: settings_reset
