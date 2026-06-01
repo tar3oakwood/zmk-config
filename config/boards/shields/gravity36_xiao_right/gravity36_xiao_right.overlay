@@ -4,6 +4,7 @@
 /* 右手側用の仮想的なkscanを定義して選択する */
     chosen {
         zmk,kscan = &kscan_composite;
+        zmk,matrix_transform = &default_transform;
     };
 
 /* 左手のマトリクスを流用しつつ、列を5つ右にずらす設定 */
