@@ -14,7 +14,7 @@
 
 // column-offset = <5> により、RC(行, 0) が RC(行, 5) に変換されます
         matrix {
-            kscan = &kscan_left;
+            kscan = <&kscan_left>;
             column-offset = <5>;
         };
     };
