@@ -1,4 +1,4 @@
-#include "<gravity36_xiao.dtsi>"
+#include <gravity36_xiao.dtsi>
 
 / {
 /* 選択されたkscanを明示 */
