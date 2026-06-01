@@ -1,9 +1,8 @@
 #include "../gravity36_xiao/gravity36_xiao.dtsi"
 
 / {
-/* 選択されたkscanを明示 */
     chosen {
-        zmk,kscan = &kscan_left;
+        zmk,kscan = &kscan0;
         zmk,matrix_transform = &default_transform;
     };
 };
