@@ -1,22 +1,8 @@
 #include "../gravity36_xiao/gravity36_xiao.dtsi"
 
 / {
-/* 右手側用の仮想的なkscanを定義して選択する */
     chosen {
-        zmk,kscan = &kscan_composite;
+        zmk,kscan = &kscan_right; /* dtsi内に kscan_right を追加定義する */
         zmk,matrix_transform = &default_transform;
-    };
-
-/* 左手のマトリクスを流用しつつ、列を5つ右にずらす設定 */
-    kscan_composite: kscan_composite {
-        compatible = "zmk,kscan-composite";
-        rows = <4>;
-        columns = <10>; // 全体の列数
-
-// column-offset = <5> により、RC(行, 0) が RC(行, 5) に変換されます
-        matrix {
-            kscan = <&kscan_left>;
-            column-offset = <5>;
-        };
     };
 };
