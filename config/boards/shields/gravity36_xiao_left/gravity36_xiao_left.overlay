@@ -1,7 +1,12 @@
 #include "../../../gravity36_xiao.dtsi"
 
 / {
-    /* zmk-rgbled-widgetが内蔵LEDを制御するための仮想ハードウェアノード */
+/* 選択されたkscanを明示 */
+    chosen {
+        zmk,kscan = &kscan_left;
+    };
+
+/* zmk-rgbled-widgetが内蔵LEDを制御するための仮想ハードウェアノード */
     led_widget: led_widget {
         compatible = "zmk,rgbled-widget";
         label = "RGBLED_WIDGET";
