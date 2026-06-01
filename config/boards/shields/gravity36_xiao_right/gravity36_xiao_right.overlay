@@ -1,4 +1,4 @@
-#include "<gravity36_xiao.dtsi>"
+#include <gravity36_xiao.dtsi>
 
 / {
 /* 右手側用の仮想的なkscanを定義して選択する */
