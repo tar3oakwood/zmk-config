@@ -4,5 +4,6 @@
 /* 選択されたkscanを明示 */
     chosen {
         zmk,kscan = &kscan_left;
+        zmk,matrix_transform = &default_transform;
     };
 };
