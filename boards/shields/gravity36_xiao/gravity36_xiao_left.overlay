@@ -5,23 +5,4 @@
         zmk,kscan = &kscan0;
         zmk,matrix_transform = &default_transform;
     };
-
-    aliases {
-        led-red = &led_red;
-        led-green = &led_green;
-        led-blue = &led_blue;
-    };
-
-    leds {
-        compatible = "gpio-leds";
-        led_red: led_red {
-            gpios = <&gpio0 17 GPIO_ACTIVE_LOW>;
-        };
-        led_green: led_green {
-            gpios = <&gpio0 18 GPIO_ACTIVE_LOW>;
-        };
-        led_blue: led_blue {
-            gpios = <&gpio0 19 GPIO_ACTIVE_LOW>;
-        };
-    };
 };
