@@ -11,7 +11,7 @@
             &kp A   &kp S   &kp D     &kp F       &kp G                &kp H            &kp J            &kp K      &kp L    &kp RET
             &kp Z   &kp X   &kp C     &kp V       &kp B                &kp N            &kp M            &kp COMMA  &kp DOT  &kp SLASH
             /*                &kp SUPER &lt 1 SPACE &kp LANG_MUHENKAN    &kp LANG_HENKAN  &lt 2 BACKSPACE  &kp LSHIFT */
-                            &kp N1 &kp SPACE &kp LANG_MUHENKAN    &kp LANG_HENKAN  &kp BACKSPACE  &kp LSHIFT
+                            &kp LGUI &kp SPACE &kp N1    &kp N2  &kp BSPC  &kp LSHIFT
 
             /*    親指debug用    */
             /*               &kp N1  &kp N2  &kp N3       &kp N4  &kp N5  &kp N6 */
