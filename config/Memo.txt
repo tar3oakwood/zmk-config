@@ -1,0 +1,1 @@
+https://github.com/thatsnek/zmk-config-hw/tree/master
