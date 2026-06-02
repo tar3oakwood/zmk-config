@@ -53,7 +53,23 @@
             ;
 
    };
-/* zmk-rgbled-widgetが内蔵LEDを制御するための仮想ハードウェアノード */
+
+    /* 実際の物理ピンの定義 */
+    leds {
+        compatible = "gpio-leds";
+        led_red: led_red { gpios = <&gpio0 17 GPIO_ACTIVE_LOW>; };
+        led_green: led_green { gpios = <&gpio0 18 GPIO_ACTIVE_LOW>; };
+        led_blue: led_blue { gpios = <&gpio0 19 GPIO_ACTIVE_LOW>; };
+    };
+
+    /* LEDエイリアスの設定 */
+    aliases {
+        led-red = &led_red;
+        led-green = &led_green;
+        led-blue = &led_blue;
+    };
+
+    /* ウィジェット用の仮想ノード */
     led_widget: led_widget {
         compatible = "zmk,rgbled-widget";
         label = "RGBLED_WIDGET";
