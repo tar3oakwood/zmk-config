@@ -7,10 +7,10 @@
         default_layer {
             bindings = <
             /* 左手 */                                                  /* 右手 */
-            &kp Q   &kp W   &kp E     &kp R       &kp T                &kp Y            &kp U            &kp I      &kp O    &kp P
-            &mt LSHIFT A   &kp S   &kp D     &kp F       &kp G                &kp H            &kp J            &kp K      &kp L    &mt RSHIFT SEMI
-            &kp Z   &kp X   &kp C     &kp V       &kp B                &kp N            &kp M            &kp COMMA  &kp DOT  &kp SLASH
-                            &kp SUPER  &kp SPACE &mt LCTRL LANG2         &mt RALT LANG1  &kp BSPC       &lt 1 RET
+            &kp Q        &kp W   &kp E     &kp R     &kp T             &kp Y          &kp U     &kp I      &kp O    &kp P
+            &mt LSHIFT A &kp S   &kp D     &kp F     &kp G             &kp H          &kp J     &kp K      &kp L    &mt RSHIFT SEMI
+            &kp Z        &kp X   &kp C     &kp V     &kp B             &kp N          &kp M     &kp COMMA  &kp DOT  &kp SLASH
+                                 &kp SUPER &kp SPACE &mt LCTRL LANG2   &mt RALT LANG1 &kp BSPC  &kp RET
 
             /*    親指debug用    */
             /*               &kp N1  &kp N2  &kp N3       &kp N4  &kp N5  &kp N6 */
