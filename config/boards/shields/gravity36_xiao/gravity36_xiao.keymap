@@ -29,7 +29,10 @@
             &kp Z   &kp X   &kp C   &kp V   &kp B       &kp N   &kp M   &kp CMMA&kp DOT &kp FSLH
             
             /* 4行目：SPACEホールドでLayer1 / ENTERホールドでLayer2 */
-                    &kp LALT &lt 1 SPC &kp INT_MUHENKAN   &kp INT_HENKAN &lt 2 RET &kp RCTRL
+            /*        &kp LALT &lt 1 SPC &kp INT_MUHENKAN   &kp INT_HENKAN &lt 2 RET &kp RCTRL    */
+
+            /*    debug用    */
+            &kp 1   &kp 2   &kp 3   &kp 4   &kp 5        &kp 6   &kp 7   &kp 8   &kp 9   &kp 0
             >;
         };
 
