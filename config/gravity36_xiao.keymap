@@ -12,10 +12,10 @@
             &kp Z   &kp X   &kp C   &kp V   &kp B       &kp N   &kp M   &kp CMMA&kp DOT &kp FSLH
             
             /* 4行目：SPACEホールドでLayer1 / ENTERホールドでLayer2 */
-            /*        &kp SUPER &lt 1 SPC &mt LCTRL INT_MUHENKAN   &mt RALT INT_HENKAN &lt 2 BSPC &kp LSHIFT "/
+                    &kp SUPER &lt 1 SPC &kp INT_MUHENKAN   &kp INT_HENKAN &lt 2 BSPC &kp LSHIFT
 
             /*    親指debug用    */
-                           &kp N1  &kp N2  &kp N3       &kp N4  &kp N5  &kp N6
+            /*               &kp N1  &kp N2  &kp N3       &kp N4  &kp N5  &kp N6 */
             >;
         };
 
