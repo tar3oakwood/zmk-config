@@ -6,13 +6,11 @@
         compatible = "zmk,keymap";
         default_layer {
             bindings = <
-            /* 左手 */                                          /* 右手 */
-            &kp Q   &kp W   &kp E   &kp R   &kp T       &kp Y   &kp U   &kp I   &kp O   &kp P
-            &kp A   &kp S   &kp D   &kp F   &kp G       &kp H   &kp J   &kp K   &kp L   &kp RET
-            &kp Z   &kp X   &kp C   &kp V   &kp B       &kp N   &kp M   &kp CMMA&kp DOT &kp FSLH
-            
-            /* 4行目：SPACEホールドでLayer1 / ENTERホールドでLayer2 */
-                    &kp SUPER &lt 1 SPC &kp INT_MUHENKAN   &kp INT_HENKAN &lt 2 BSPC &kp LSHIFT
+            /* 左手 */                                                  /* 右手 */
+            &kp Q   &kp W   &kp E     &kp R       &kp T                &kp Y            &kp U            &kp I      &kp O    &kp P
+            &kp A   &kp S   &kp D     &kp F       &kp G                &kp H            &kp J            &kp K      &kp L    &kp RET
+            &kp Z   &kp X   &kp C     &kp V       &kp B                &kp N            &kp M            &kp COMMA  &kp DOT  &kp SLASH
+                            &kp SUPER &lt 1 SPACE &kp LANG_MUHENKAN    &kp LANG_HENKAN  &lt 2 BACKSPACE  &kp LSHIFT            
 
             /*    親指debug用    */
             /*               &kp N1  &kp N2  &kp N3       &kp N4  &kp N5  &kp N6 */
