@@ -11,7 +11,7 @@
             &mt LSHIFT A &kp S   &kp D     &kp F     &kp G             &kp H          &kp J     &kp K      &kp L    &mt RSHFT SEMICOLON
             &kp Z        &kp X   &kp C     &kp V     &kp B             &kp N          &kp M     &kp COMMA  &kp DOT  &kp SLASH
             /*                     &kp SUPER &kp SPACE &mt LCTRL LANG2   &mt RALT LANG1 &kp BSPC  &kp RET */
-                                 &kp SUPER &kp SPACE &kp LCTRL   &kp RALT &kp BSPC  &kp RET
+                                 &kp LGUI &kp SPACE &kp LCTRL   &kp RALT &kp BSPC  &kp RET
             >;
         };
 
