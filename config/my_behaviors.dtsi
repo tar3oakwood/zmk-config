@@ -1,0 +1,26 @@
+/ {
+    behaviors {
+        lt_repeat: lt_repeat_bs {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>; // これで連続入力が可能に
+            flavor = "tap-preferred";
+            bindings = <&mo>, <&kp>;
+        };
+        my_ht: my_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+
+    };
+};
+
+// キーマップでの使用例
+// &my_ht RSHFT SEMICOLON
+// &my_ht LCTRL ESC
+// &lt_repeat 1 BSPC
