@@ -107,8 +107,8 @@
     };
 
     /* ウィジェット用の仮想ノード */
-    led_widget: led_widget {
-        compatible = "zmk,rgbled-widget";
-        label = "RGBLED_WIDGET";
-    };
+//    led_widget: led_widget {
+//        compatible = "zmk,rgbled-widget";
+//        label = "RGBLED_WIDGET";
+//    };
 };
