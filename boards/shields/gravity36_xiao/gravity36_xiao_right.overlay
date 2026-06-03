@@ -1,8 +1,14 @@
 #include "gravity36_xiao.dtsi"
 
+&default_transform {
+    col-offset = <5>;
+};
+
+/*
 / {
     chosen {
         zmk,kscan = &kscan0;
         zmk,matrix_transform = &right_transform;
     };
 };
+*/
