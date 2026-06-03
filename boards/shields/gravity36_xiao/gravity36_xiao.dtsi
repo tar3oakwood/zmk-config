@@ -6,10 +6,10 @@
     chosen {
 //        zmk,kscan = &kscan0;
 //        zmk,matrix_transform = &default_transform;
-          zmk,physical-layout = &roba_physical_layout;
+          zmk,physical-layout = &gravity36_physical_layout;
     };
 
-    gravity36_physical_layout0: gravity36_physical_layout_0 {
+    gravity36_physical_layout: gravity36_physical_layout {
         compatible = "zmk,physical-layout";
         display-name = "Default";
 
