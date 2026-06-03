@@ -20,7 +20,6 @@
         >;
     };
 
-/*
     right_transform: keymap_transform_1 {
         compatible = "zmk,matrix-transform";
         columns = <10>;
@@ -32,7 +31,6 @@
                             RC(3,7) RC(3,8) RC(3,9)  RC(3,0) RC(3,1) RC(3,2)
         >;
     };
-*/
 
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
