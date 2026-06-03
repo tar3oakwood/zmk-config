@@ -38,7 +38,7 @@
         // レイヤー3: Enter長押し時に有効化（その他）
         layer_3 {
             bindings = <
-            &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
+            &trans  &trans  &trans  &out OUT_USB  &out OUT_BLE      &trans  &trans  &trans  &trans  &trans
             &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
             &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
                     &trans  &trans  &trans              &trans  &trans  &trans
