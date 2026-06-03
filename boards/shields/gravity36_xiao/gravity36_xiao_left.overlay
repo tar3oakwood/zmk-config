@@ -1,8 +1,10 @@
 #include "gravity36_xiao.dtsi"
 
+/*
 / {
     chosen {
         zmk,kscan = &kscan0;
         zmk,matrix_transform = &default_transform;
     };
 };
+*/
