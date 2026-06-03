@@ -5,6 +5,7 @@ include:
     shield: gravity36_xiao_left
     snippets:
       - zmk-rgbled-widget
+      - studio-rpc-usb-uart
   - board: xiao_ble//zmk
     shield: gravity36_xiao_right
     snippets:
