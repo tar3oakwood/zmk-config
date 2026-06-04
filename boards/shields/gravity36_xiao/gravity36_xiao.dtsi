@@ -7,10 +7,6 @@
         zmk,physical-layout = &physical_layout0;
     };
 
-    &physical_layout0 {
-        transform = <&default_transform>;
-    };
-
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
         columns = <10>; // 5列(左) + 5列(右) = 10列
@@ -43,6 +39,10 @@
             , <&xiao_d 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             , <&xiao_d 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
+    };
 
-   };
+};
+
+&physical_layout0 {
+    transform = <&default_transform>;
 };
