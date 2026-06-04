@@ -25,7 +25,7 @@
 
         bt_disc_none: bt_disc_none {
             compatible = "zmk,behavior-hold-tap";
-            bindings = <&bt>, <&none>;
+            bindings = <&bt>, <&bt>;
 
             #binding-cells = <2>;
             tapping-term-ms = <3000>;
