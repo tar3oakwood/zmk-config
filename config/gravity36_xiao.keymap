@@ -5,22 +5,29 @@
 
 / {
     behaviors {
-        exbehavior: exbehavior {
+        exlt: ex_lt {
             compatible = "zmk,behavior-hold-tap";
-            label = "EXBEHAVIOR";
-            bindings = <&lt>, <&kp>;
-
             #binding-cells = <2>;
             tapping-term-ms = <200>;
+            quick-tap-ms = <200>; // これで連続入力が可能に
+            flavor = "tap-preferred";
+            bindings = <&mo>, <&kp>;
         };
-    };
+        exmt: ex_mt {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };    };
 
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&studio_unlock  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &mt LSHFT A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &mt RSHFT SEMICOLON  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp SLASH  &kp LGUI  &xlt 1 SPACE  &mt LCTRL LANG2  &mt RALT LANG1  &xlt 2 BSPC  &lt 3 RET
+&studio_unlock  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &mt LSHFT A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &mt RSHFT SEMICOLON  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp SLASH  &kp LGUI  &exlt 1 SPACE  &mt LCTRL LANG2  &mt RALT LANG1  &exlt 2 BSPC  &lt 3 RET
             >;
         };
 
