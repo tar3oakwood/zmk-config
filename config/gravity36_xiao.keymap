@@ -26,8 +26,7 @@
         bt_disc_none: bt_disc_none {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&bt>, <&none>;
-
-            #binding-cells = <2>;
+            #binding-cells = <0>;
             tapping-term-ms = <3000>;
             flavor = "tap-preferred";
         };
@@ -71,7 +70,7 @@
 
         layer_3 {
             bindings = <
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 3  &bt_disc_none BT_DISC 0 0  &studio_unlock  &trans  &trans  &trans  &trans  &trans
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 3  &bt_disc_none BT_DISC  &studio_unlock  &trans  &trans  &trans  &trans  &trans
 &trans        &trans        &trans        &trans                     &trans          &trans  &trans  &trans  &trans  &trans
 &trans        &trans        &trans        &trans                     &trans          &trans  &trans  &trans  &trans  &trans
 &trans        &trans        &trans        &trans                     &trans          &trans
