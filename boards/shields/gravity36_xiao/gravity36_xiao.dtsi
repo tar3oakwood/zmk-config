@@ -12,7 +12,7 @@
         compatible = "zmk,physical-layout";
         display-name = "Gravity36";
 
-        kscan = <&kscan0>;
+//        kscan = <&kscan0>;
         transform = <&matrix_transform>;
 
         keys  //                     w   h    x    y     rot    rx    ry
