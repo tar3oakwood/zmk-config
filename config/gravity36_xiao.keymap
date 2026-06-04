@@ -23,9 +23,8 @@
             bindings = <&kp>, <&kp>;
         };
 
-        bt_none_disc: bt_none_disc {
+        bt_disc_none: bt_disc_none {
             compatible = "zmk,behavior-hold-tap";
-            label = "BT_NONE_DISC";
             bindings = <&bt>, <&none>;
 
             #binding-cells = <2>;
@@ -72,7 +71,7 @@
 
         layer_3 {
             bindings = <
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 3  &bt_none_disc BT_DISC 0 0  &studio_unlock  &trans  &trans  &trans  &trans  &trans
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 3  &bt_disc_none BT_DISC 0 0  &studio_unlock  &trans  &trans  &trans  &trans  &trans
 &trans        &trans        &trans        &trans                     &trans          &trans  &trans  &trans  &trans  &trans
 &trans        &trans        &trans        &trans                     &trans          &trans  &trans  &trans  &trans  &trans
 &trans        &trans        &trans        &trans                     &trans          &trans
