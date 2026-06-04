@@ -5,15 +5,15 @@
 / {
     chosen {
         zmk,kscan = &kscan0;
-        zmk,physical-layout = &gravity36_physical_layout;
+        zmk,physical-layout = &gravity36_layout;
     };
 
-    gravity36_physical_layout: gravity36_physical_layout {
+    gravity36l_layout: gravity36_layout {
         compatible = "zmk,physical-layout";
         display-name = "Gravity36";
 
         kscan = <&kscan0>;
-        transform = <&matrix_transform0>;
+        transform = <&matrix_transform>;
 
         keys  //                     w   h    x    y     rot    rx    ry
             = <&key_physical_attrs 100 100    0    0       0     0     0>
