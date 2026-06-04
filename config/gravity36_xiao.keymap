@@ -1,5 +1,4 @@
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 / {
@@ -20,14 +19,6 @@
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
-        };
-
-        bt_3sec_hold: bt_3sec_hold {
-            compatible = "zmk,behavior-hold-tap";
-            bindings = <&bt>;
-            #binding-cells = <2>;
-            tapping-term-ms = <3000>;
-            flavor = "tap-preferred";
         };
     };
 
