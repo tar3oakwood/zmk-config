@@ -22,6 +22,15 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+        bt_disc_none: bt_disc_none {
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&bt>, <&none>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <3000>;
+            flavor = "tap-preferred";
+        };
     };
 
     keymap {
@@ -62,10 +71,10 @@
 
         layer_3 {
             bindings = <
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 3  &trans  &studio_unlock  &trans  &trans  &trans  &trans  &trans
-&trans        &trans        &trans        &trans  &trans          &trans  &trans  &trans  &trans  &trans
-&trans        &trans        &trans        &trans  &trans          &trans  &trans  &trans  &trans  &trans
-&trans        &trans        &trans        &trans  &trans          &trans
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 3  &trans  &trans  &trans  &trans  &trans  &trans  &studio_unlock
+&trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans        &trans        &trans        &trans  &trans  &trans
             >;
         };
     };
