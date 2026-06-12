@@ -12,20 +12,15 @@ config ZMK_SPLIT_ROLE_CENTRAL
     bool
     default y
 
-# 左手にZMK Studioを組み込む
+# 左eteにZMK Studioを組み込む
 config ZMK_STUDIO
     bool
     default y
 
-# ZMK Studioの全機能をフル開放（Outputsなどを出現させる）
-config ZMK_STUDIO_AND_EVERYTHING
+# ★【これが必要！】ZMK Studioにすべての挙動（Outputsなど）を強制出現させる
+config ZMK_STUDIO_TARGET_FEATURES_ALL
     bool
     default y
-
-# ZMK Studioのロック機能を無効化（LOCKING=n の代わり）
-config ZMK_STUDIO_LOCKING
-    bool
-    default n
 
 endif # SHIELD_GRAVITY36_XIAO_LEFT
 
