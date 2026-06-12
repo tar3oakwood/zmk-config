@@ -1,0 +1,31 @@
+# 左手のビルド（SHIELD_GRAVITY36_XIAO_LEFT）のときだけ適用する処理
+if SHIELD_GRAVITY36_XIAO_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "Gravity36"
+
+# 左手を親機にする
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif # SHIELD_GRAVITY36_XIAO_LEFT
+
+
+# 右手のビルド（SHIELD_GRAVITY36_XIAO_RIGHT）のときだけ適用する処理
+if SHIELD_GRAVITY36_XIAO_RIGHT
+
+# 右手を子機にする
+config ZMK_SPLIT_ROLE_CENTRAL
+    default n
+
+endif # SHIELD_GRAVITY36_XIAO_RIGHT
+
+
+# 左右どちらのビルドでも適用する処理
+if SHIELD_GRAVITY36_XIAO_LEFT || SHIELD_GRAVITY36_XIAO_RIGHT
+
+# 分割型キーボードとして動かす
+config ZMK_SPLIT
+    default y
+
+endif # SHIELD_GRAVITY36_XIAO_LEFT || SHIELD_GRAVITY36_XIAO_RIGHT
