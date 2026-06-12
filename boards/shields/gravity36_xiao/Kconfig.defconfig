@@ -10,9 +10,17 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
-# ★【最重要】親機にZMK Studioを組み込む許可を出す
+# 左手にZMK Studioを組み込む
 config ZMK_STUDIO
     default y
+
+# ZMK Studioの全機能をフル開放（Outputsなどを出現させる）
+config ZMK_STUDIO_AND_EVERYTHING
+    default y
+
+# ZMK Studioのロック機能を無効化（LOCKING=n の代わり）
+config ZMK_STUDIO_LOCKING
+    default n
 
 endif # SHIELD_GRAVITY36_XIAO_LEFT
 
@@ -30,12 +38,19 @@ endif # SHIELD_GRAVITY36_XIAO_RIGHT
 
 
 # =======================================================
-# 左右どちらのビルドでも一括して適用する処理
+# 左右どちらのビルドでも一括して適用する処理（共通機能）
 # =======================================================
 if SHIELD_GRAVITY36_XIAO_LEFT || SHIELD_GRAVITY36_XIAO_RIGHT
 
 # 分割型キーボードとして動かす
 config ZMK_SPLIT
+    default y
+
+# 左右両方でマウス機能を強制有効化（これでメニューに出現します）
+config ZMK_MOUSE
+    default y
+
+config ZMK_POINTING
     default y
 
 endif # SHIELD_GRAVITY36_XIAO_LEFT || SHIELD_GRAVITY36_XIAO_RIGHT
