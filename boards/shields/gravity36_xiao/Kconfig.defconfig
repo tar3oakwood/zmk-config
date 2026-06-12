@@ -1,4 +1,6 @@
-# 左手のビルド（SHIELD_GRAVITY36_XIAO_LEFT）のときだけ適用する処理
+# =======================================================
+# 左手のビルド（SHIELD_GRAVITY36_XIAO_LEFT）のときだけ適用
+# =======================================================
 if SHIELD_GRAVITY36_XIAO_LEFT
 
 config ZMK_KEYBOARD_NAME
@@ -8,10 +10,16 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
+# ★【最重要】親機にZMK Studioを組み込む許可を出す
+config ZMK_STUDIO
+    default y
+
 endif # SHIELD_GRAVITY36_XIAO_LEFT
 
 
-# 右手のビルド（SHIELD_GRAVITY36_XIAO_RIGHT）のときだけ適用する処理
+# =======================================================
+# 右手のビルド（SHIELD_GRAVITY36_XIAO_RIGHT）のときだけ適用
+# =======================================================
 if SHIELD_GRAVITY36_XIAO_RIGHT
 
 # 右手を子機にする
@@ -21,7 +29,9 @@ config ZMK_SPLIT_ROLE_CENTRAL
 endif # SHIELD_GRAVITY36_XIAO_RIGHT
 
 
-# 左右どちらのビルドでも適用する処理
+# =======================================================
+# 左右どちらのビルドでも一括して適用する処理
+# =======================================================
 if SHIELD_GRAVITY36_XIAO_LEFT || SHIELD_GRAVITY36_XIAO_RIGHT
 
 # 分割型キーボードとして動かす
