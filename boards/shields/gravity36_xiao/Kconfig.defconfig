@@ -1,23 +1,17 @@
-# =======================================================
-# 左手のビルド（SHIELD_GRAVITY36_XIAO_LEFT）のときだけ適用
-# =======================================================
 if SHIELD_GRAVITY36_XIAO_LEFT
 
 config ZMK_KEYBOARD_NAME
     string
     default "Gravity36"
 
-# 左手を親機にする
 config ZMK_SPLIT_ROLE_CENTRAL
     bool
     default y
 
-# 左eteにZMK Studioを組み込む
 config ZMK_STUDIO
     bool
     default y
 
-# ★【これが必要！】ZMK Studioにすべての挙動（Outputsなど）を強制出現させる
 config ZMK_STUDIO_TARGET_FEATURES_ALL
     bool
     default y
@@ -25,12 +19,8 @@ config ZMK_STUDIO_TARGET_FEATURES_ALL
 endif # SHIELD_GRAVITY36_XIAO_LEFT
 
 
-# =======================================================
-# 右手のビルド（SHIELD_GRAVITY36_XIAO_RIGHT）のときだけ適用
-# =======================================================
 if SHIELD_GRAVITY36_XIAO_RIGHT
 
-# 右手を子機にする
 config ZMK_SPLIT_ROLE_CENTRAL
     bool
     default n
@@ -38,17 +28,12 @@ config ZMK_SPLIT_ROLE_CENTRAL
 endif # SHIELD_GRAVITY36_XIAO_RIGHT
 
 
-# =======================================================
-# 左右どちらのビルドでも一括して適用する処理（共通機能）
-# =======================================================
 if SHIELD_GRAVITY36_XIAO_LEFT || SHIELD_GRAVITY36_XIAO_RIGHT
 
-# 分割型キーボードとして動かす
 config ZMK_SPLIT
     bool
     default y
 
-# 左右両方でマウス機能を強制有効化
 config ZMK_MOUSE
     bool
     default y
