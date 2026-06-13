@@ -5,6 +5,8 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
 
+#define TAPPING_TERM_SHORT 150
+
 / {
     behaviors {
         exlt: exlt {
