@@ -31,19 +31,20 @@
             #binding-cells = <2>;
             flavor = "hold-preferred";   // 長押しを最優先する設定
             tapping-term-ms = <3000>;    // 3000ミリ秒押し続けないとホールド判定にならない
-            bindings = <&bt>, <&none>;   // ホールド時：&bt  / タップ時：何もしない (&none)
+            bindings = <&bt>, <&none>;
+   // ホールド時：&bt  / タップ時：何もしない (&none)
         };
     };
 
     combos {
         compatible = "zmk,combos";
-        
+
         combo_bt_clr_3s {
             timeout-ms = <100>;          // 3つのキーを同時に認識するための猶予時間（少し広めの100ms）
             key-positions = <24 4 22>;   // ★ B (24), T (4), C (22)
             bindings = <&bt_clr_safe BT_CLR 0>; // 3秒長押しで BT_CLR を発動
-            
             // 押し込んでいる間、QやWなどの通常文字が裏で連打されるのを防ぐ設定
+
             slow-release;
         };
     };
@@ -64,10 +65,10 @@
 
         layer_1 {
             bindings = <
-&kp F1  &kp F2   &kp F3   &kp F4     &trans  &trans      &kp N7  &kp N8  &kp N9  &kp MINUS
-&kp F5  &kp F6   &kp F7   &kp F8     &trans  &kp N0      &kp N4  &kp N5  &kp N6  &kp PLUS
-&kp F9  &kp F10  &kp F11  &kp F12    &trans  &kp PERIOD  &kp N1  &kp N2  &kp N3  &trans
-&trans  &trans   &trans   &kp EQUAL  &trans  &trans
+&kp ESC    &kp F1  &kp F2   &kp F3   &kt F4   &kt EQUAL   &kp N7  &kp N8  &kp N9  &kp DEL
+&kp TAB    &kp F5  &kp F6   &kp F7   &kt F8   &kp N0      &kp N4  &kp N5  &kp N6  &kp MINUS
+&kp LSHFT  &kp F9  &kp F10  &kp F11  &kt F12  &kp PERIOD  &kp N1  &kp N2  &kp N3  &kt PLUS
+&trans     &trans  &trans   &trans   &trans   &trans
             >;
         };
 
@@ -75,9 +76,9 @@
 
         layer_2 {
             bindings = <
-&kp ESC  &trans    &kp UP_ARROW    &trans           &trans  &trans          &trans     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
-&kp TAB  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &kp MINUS       &kp EQUAL  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp NON_US_BACKSLASH
-&trans   &kp HOME  &trans          &kp END          &trans  &kp UNDERSCORE  &kp PLUS   &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE
+&kp ESC  &none     &kp UP_ARROW    &none            &none   &none           &none      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none
+&kp TAB  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none   &kp MINUS       &kp EQUAL  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp NON_US_BACKSLASH
+&none    &kp HOME  &none           &kp END          &none   &kp UNDERSCORE  &kp PLUS   &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE
 &trans   &trans    &trans          &trans           &trans  &trans
             >;
         };
@@ -86,19 +87,19 @@
 
         layer_3 {
             bindings = <
-&bootloader   &trans        &trans        &trans  &kp LC(RA(T))  &trans  &trans  &trans  &trans  &studio_unlock
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans         &trans  &trans  &trans  &trans  &out OUT_USB
-&trans        &trans        &trans        &trans  &bt BT_CLR     &trans  &trans  &trans  &trans  &out OUT_BLE
-&trans        &trans        &trans        &trans  &trans         &trans
+&bootloader    &none          &none          &none   &kp LC(RA(T))  &none   &none  &none  &none  &studio_unlock
+&bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &none   &out OUT_USB   &none   &none  &none  &none  &none
+&bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &none   &out OUT_BLE   &none   &none  &none  &none  &none
+&trans         &trans         &trans         &trans  &trans         &trans
             >;
         };
 
         layer_4 {
             bindings = <
-&trans  &trans          &mmv MOVE_UP    &trans           &trans  &trans  &trans          &msc SCRL_UP    &trans           &mkp MB5
-&trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans  &mkp LCLK       &mkp MCLK       &mkp RCLK        &mkp MB4
-&trans  &trans          &trans          &trans           &trans  &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans
-&trans  &trans          &trans          &kt DELETE       &trans  &trans
+&kt ESC  &none           &mmv MOVE_UP    &none            &none   &none   &none           &msc SCRL_UP    &none            &mkp MB5
+&kt TAB  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none   &none   &mkp LCLK       &mkp MCLK       &mkp RCLK        &mkp MB4
+&none    &none           &none           &none            &none   &none   &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &none
+&trans   &trans          &trans          &kt DELETE       &trans  &trans
             >;
         };
     };
