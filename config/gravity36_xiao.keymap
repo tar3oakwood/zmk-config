@@ -25,6 +25,27 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+        bt_clr_safe: bt_clr_safe {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";   // 長押しを最優先する設定
+            tapping-term-ms = <3000>;    // 3000ミリ秒押し続けないとホールド判定にならない
+            bindings = <&bt>, <&none>;   // ホールド時：&bt  / タップ時：何もしない (&none)
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+        
+        combo_bt_clr_3s {
+            timeout-ms = <100>;          // 3つのキーを同時に認識するための猶予時間（少し広めの100ms）
+            key-positions = <24 4 22>;   // ★ B (24), T (4), C (22)
+            bindings = <&bt_clr_safe BT_CLR 0>; // 3秒長押しで BT_CLR を発動
+            
+            // 押し込んでいる間、QやWなどの通常文字が裏で連打されるのを防ぐ設定
+            slow-release;
+        };
     };
 
     keymap {
