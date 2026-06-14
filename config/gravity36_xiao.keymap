@@ -32,7 +32,8 @@
             flavor = "hold-preferred";   // 長押しを最優先する設定
             tapping-term-ms = <3000>;    // 3000ミリ秒押し続けないとホールド判定にならない
             bindings = <&bt>, <&none>;
-   // ホールド時：&bt  / タップ時：何もしない (&none)
+
+            // ホールド時：&bt  / タップ時：何もしない (&none)
         };
     };
 
@@ -65,9 +66,9 @@
 
         layer_1 {
             bindings = <
-&kp ESC    &kp F1  &kp F2   &kp F3   &kt F4   &kt EQUAL   &kp N7  &kp N8  &kp N9  &kp DEL
-&kp TAB    &kp F5  &kp F6   &kp F7   &kt F8   &kp N0      &kp N4  &kp N5  &kp N6  &kp MINUS
-&kp LSHFT  &kp F9  &kp F10  &kp F11  &kt F12  &kp PERIOD  &kp N1  &kp N2  &kp N3  &kt PLUS
+&kp ESC    &kp F1  &kp F2   &kp F3   &kp F4   &kp EQUAL   &kp N7  &kp N8  &kp N9  &kp DEL
+&kp TAB    &kp F5  &kp F6   &kp F7   &kp F8   &kp N0      &kp N4  &kp N5  &kp N6  &kp MINUS
+&kp LSHFT  &kp F9  &kp F10  &kp F11  &kp F12  &kp PERIOD  &kp N1  &kp N2  &kp N3  &kp PLUS
 &trans     &trans  &trans   &trans   &trans   &trans
             >;
         };
@@ -76,10 +77,10 @@
 
         layer_2 {
             bindings = <
-&kp ESC  &none     &kp UP_ARROW    &none            &none   &none           &none      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none
-&kp TAB  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none   &kp MINUS       &kp EQUAL  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp NON_US_BACKSLASH
-&none    &kp HOME  &none           &kp END          &none   &kp UNDERSCORE  &kp PLUS   &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE
-&trans   &trans    &trans          &trans           &trans  &trans
+&kp ESC  &none     &kp UP_ARROW    &none            &none          &none           &none      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none
+&kp TAB  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PAGE_UP    &kp MINUS       &kp EQUAL  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp NON_US_BACKSLASH
+&none    &kp HOME  &none           &kp END          &kp PAGE_DOWN  &kp UNDERSCORE  &kp PLUS   &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE
+&trans   &trans    &trans          &trans           &trans         &trans
             >;
         };
 
@@ -87,10 +88,10 @@
 
         layer_3 {
             bindings = <
-&bootloader    &none          &none          &none   &kp LC(RA(T))  &none   &none  &none  &none  &studio_unlock
-&bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &none   &out OUT_USB   &none   &none  &none  &none  &none
-&bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &none   &out OUT_BLE   &none   &none  &none  &none  &none
-&trans         &trans         &trans         &trans  &trans         &trans
+&bootloader    &none          &none          &none   &none         &none   &none  &none  &none  &studio_unlock
+&bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &none   &out OUT_USB  &none   &none  &none  &none  &none
+&bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &none   &out OUT_BLE  &none   &none  &none  &none  &none
+&trans         &trans         &trans         &trans  &trans        &trans
             >;
         };
 
