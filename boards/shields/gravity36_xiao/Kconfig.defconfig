@@ -1,10 +1,10 @@
+config ZMK_KEYBOARD_NAME
+    default "Gravity36"
+
 config ZMK_SPLIT
     default y
 
 config ZMK_SPLIT_BLE
-    default y
-
-config ZMK_USB
     default y
 
 config ZMK_POINTING
@@ -24,8 +24,8 @@ config BT_MAX_PAIRED
 
 if SHIELD_GRAVITY36_XIAO_LEFT
 
-config ZMK_KEYBOARD_NAME
-    default "Gravity36"
+config ZMK_USB
+    default y
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
@@ -34,8 +34,5 @@ endif # SHIELD_GRAVITY36_XIAO_LEFT
 
 
 if SHIELD_GRAVITY36_XIAO_RIGHT
-
-config ZMK_SPLIT_ROLE_CENTRAL
-    default n
 
 endif # SHIELD_GRAVITY36_XIAO_RIGHT
