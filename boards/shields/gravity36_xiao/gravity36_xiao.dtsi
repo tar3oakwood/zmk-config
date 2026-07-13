@@ -1,11 +1,33 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include "gravity36_xiao_layouts.dtsi"
 
+/* ========================================================
+   将来のコイン電池（CR1632×2）移行用の設定
+   XIAOを交換して3.3V給電＆D9ピン（P0.31）に配線したら、
+   battery関連のコメントアウトを削除して有効化する。
+=========================================================== */
+
 / {
     chosen {
         zmk,kscan = &kscan0;
         zmk,physical-layout = &physical_layout0;
+//次のコメントアウトを削除し有効化する
+        // zmk,battery = &vbatt;
     };
+
+//次のコメントアウトを削除
+/*
+    vbatt: battery {
+        compatible = "zmk,battery-voltage-divider";
+        label = "BATTERY";
+        io-channels = <&adc 7>; 
+        output-ohms = <0>;
+        full-ohms = <0>;
+        full-mv = <2800>;
+        low-mv = <2000>;
+    };
+*/
+//前行のコメントアウトを削除
 
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
@@ -42,6 +64,14 @@
     };
 
 };
+
+//次のコメントアウトを削除
+/*
+&adc {
+    status = "okay";
+};
+*/
+//前行のコメントアウトを削除
 
 &physical_layout0 {
     transform = <&default_transform>;
