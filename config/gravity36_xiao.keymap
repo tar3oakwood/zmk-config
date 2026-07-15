@@ -52,7 +52,6 @@
             key-positions = <24 4 22>;   // ★ B (24), T (4), C (22)
             bindings = <&bt_clr_safe BT_CLR 0>; // 3秒長押しで BT_CLR を発動
             // 押し込んでいる間、QやWなどの通常文字が裏で連打されるのを防ぐ設定
-
             slow-release;
         };
     };
@@ -69,7 +68,7 @@
             >;
         };
 
-        // レイヤー1: SPACE長押し時に有効化（数字や記号など）
+        // レイヤー1: 左SPACE長押し時に有効化（数字キーやファンクションキーなど）
 
         layer_1 {
             bindings = <
@@ -80,7 +79,7 @@
             >;
         };
 
-        // レイヤー2: Backspace長押し時に有効化（ナビゲーションやファンクションなど）
+        // レイヤー2: 右Space長押し時に有効化（カーソル操作と記号）
 
         layer_2 {
             bindings = <
@@ -91,7 +90,7 @@
             >;
         };
 
-        // レイヤー3: Enter長押し時に有効化（その他）
+        // レイヤー3: 無変換を長押し時に有効化（ブートローダー起動やBluetooth操作など）
 
         layer_3 {
             bindings = <
@@ -102,6 +101,7 @@
             >;
         };
 
+        //　レイヤー4:　変換を長押し時に有効化（マウス操作）
         layer_4 {
             bindings = <
 &kt ESC  &none           &mmv MOVE_UP    &none            &none   &none   &none           &msc SCRL_UP    &none            &mkp MB5
