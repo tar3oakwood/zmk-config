@@ -52,6 +52,7 @@
             key-positions = <24 4 22>;   // ★ B (24), T (4), C (22)
             bindings = <&bt_clr_safe BT_CLR 0>; // 3秒長押しで BT_CLR を発動
             // 押し込んでいる間、QやWなどの通常文字が裏で連打されるのを防ぐ設定
+
             slow-release;
         };
     };
@@ -61,9 +62,9 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W             &kp E          &kp R          &kp T               &kp Y                 &kp U  &kp I      &kp O    &td_p_del
+&kp Q             &kp W             &kp E          &kp R          &kp T               &kp Y                 &kp U  &kp I      &kp O    &kp P
 &kp A             &kp S             &kp D          &kp F          &kp G               &kp H                 &kp J  &kp K      &kp L    &kp ENTER
-&mt LSHFT Z       &kp X             &kp C          &mt LGUI V     &kp B               &kp N                 &kp M  &kp COMMA  &kp DOT  &mt RSHFT SLASH
+&mt LSHFT Z       &kp X             &kp C          &kp V          &kp B               &kp N                 &kp M  &kp COMMA  &kp DOT  &mt RSHFT SLASH
 &exmt LCTRL LGUI  &lt 3 LANG_HANJA  &exlt 1 SPACE  &exlt 2 SPACE  &lt 4 LANG_HANGEUL  &exmt RALT BACKSPACE
             >;
         };
@@ -75,7 +76,7 @@
 &kp F1            &kp F2            &kp F3            &kp F4        &kp F5      &kp F6            &kp F7      &kp F8      &kp F9      &kp F10
 &kp NUMBER_1      &kp N2            &kp NUMBER_3      &kp NUMBER_4  &kp N5      &kp NUMBER_6      &kp N7      &kp N8      &kp N9      &kp N0
 &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(F11)   &kp LS(N5)  &kp LS(NUMBER_6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LS(N0)
-&none             &none             &none             &none         &none       &none
+&none             &none             &none             &none         &none       &kp DEL
             >;
         };
 
@@ -94,14 +95,15 @@
 
         layer_3 {
             bindings = <
-&bootloader    &none          &none          &none   &none         &none   &none  &none  &none  &studio_unlock
-&bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &none   &out OUT_USB  &none   &none  &none  &none  &none
-&bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &none   &out OUT_BLE  &none   &none  &none  &none  &none
-&trans         &trans         &trans         &trans  &trans        &trans
+&bootloader    &none          &none          &none  &none         &none  &none  &none  &none  &studio_unlock
+&bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &none  &out OUT_USB  &none  &none  &none  &none  &none
+&bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &none  &out OUT_BLE  &none  &none  &none  &none  &none
+&none          &none          &none          &none  &none         &none
             >;
         };
 
         //　レイヤー4:　変換を長押し時に有効化（マウス操作）
+
         layer_4 {
             bindings = <
 &kt ESC  &none           &mmv MOVE_UP    &none            &none   &none   &none           &msc SCRL_UP    &none            &mkp MB5
